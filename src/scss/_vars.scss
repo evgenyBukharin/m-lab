@@ -1,14 +1,16 @@
 :root {
 	// base
 	--font-family: "RFDewiExtended", sans-serif;
-	--content-width: 1192px;
+	--content-width: 1110px;
 	--container-offset: 20px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
 	// colors
 	--white-color: #fff;
-	--black-color: #1e1e1e;
-	--green-color: #359e5f;
+	--half-black-color: #484848;
+	--black-color: #242424;
+	--green-color: #17cc5f;
+	--dark-green-color: #359e5f;
 	--blue-color: #053850;
 	--dark-grey-color: #494949;
 	--grey-color: #f4f4f4;
