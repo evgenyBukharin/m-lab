@@ -43,3 +43,19 @@ html {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+
+main section:not(:last-child) {
+	margin-bottom: 120px;
+}
+
+@media (max-width: 797px) {
+	main section:not(:last-child) {
+		margin-bottom: 100px;
+	}
+}
+
+@media (max-width: 480px) {
+	main section:not(:last-child) {
+		margin-bottom: 80px;
+	}
+}
