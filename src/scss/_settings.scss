@@ -45,18 +45,18 @@ html {
 	max-width: var(--container-width);
 }
 
-main section:not(:last-child) {
+main section {
 	margin-bottom: 120px;
 }
 
 @media (max-width: 797px) {
-	main section:not(:last-child) {
+	main section {
 		margin-bottom: 100px;
 	}
 }
 
 @media (max-width: 480px) {
-	main section:not(:last-child) {
+	main section {
 		margin-bottom: 80px;
 	}
 }
