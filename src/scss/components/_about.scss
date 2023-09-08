@@ -1,0 +1,80 @@
+.about {
+	&__container {
+		max-width: 1106px;
+	}
+	&__title {
+		margin-bottom: 79px;
+		text-align: center;
+		&-green {
+			color: var(--dark-green-color);
+		}
+		&-textarea {
+			margin-top: 36px;
+			color: var(--blue-color);
+			font-size: 16px;
+			font-weight: 700;
+			letter-spacing: -0.56px;
+			margin-bottom: 21px;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		gap: 52px;
+	}
+	&__list {
+		padding-left: 25px;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+	&__item {
+		position: relative;
+		color: var(--blue-color);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: normal;
+		&::before {
+			content: "";
+			position: absolute;
+			left: -25px;
+			top: 1px;
+			width: 18px;
+			height: 18px;
+			background: url("../img/mark.svg") no-repeat;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.about {
+		&__container {
+			max-width: 492px;
+		}
+		&__image {
+			width: 100%;
+			height: auto;
+		}
+		&__content {
+			flex-direction: column;
+			padding-left: 13px;
+			padding-right: 13px;
+			gap: 0;
+		}
+		&__textarea {
+			margin-top: 34px;
+		}
+		&__title {
+			margin-bottom: 27px;
+			&-textarea {
+				margin-top: 0;
+				margin-bottom: 17px;
+				font-size: 14px;
+				letter-spacing: -0.49px;
+			}
+		}
+		&__item {
+			font-size: 14px;
+		}
+	}
+}
