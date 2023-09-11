@@ -7,6 +7,7 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		gap: 6px;
 		margin-bottom: 28px;
 	}
 	&__subtitle {
@@ -22,6 +23,12 @@
 		letter-spacing: -0.84px;
 		margin-bottom: 18px;
 		max-width: 555px;
+		&-clients {
+			text-align: center;
+			font-size: 20px;
+			line-height: normal;
+			margin-bottom: 48px;
+		}
 		&-item {
 			color: rgba(0, 0, 0, 0.7);
 			font-size: 14px;
@@ -59,8 +66,12 @@
 		font-weight: 600;
 		line-height: 139.8%;
 		letter-spacing: -0.56px;
+		margin: 0;
 		margin-bottom: 29px;
 		max-width: 586px;
+		&-dot {
+			margin-left: -3px;
+		}
 	}
 	&__icon {
 		&-fso {
@@ -102,8 +113,172 @@
 		text-transform: unset;
 		width: fit-content;
 		margin: 0 auto;
+		&-discuss {
+			max-width: 324px;
+			width: 100%;
+			padding: 20px 10px 21px 10px;
+		}
 	}
 	&__link {
 		font-weight: 700;
+	}
+}
+
+@media (max-width: 1024px) {
+	.projects {
+		&__content {
+			padding: 35px 10px 40px 19px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.projects {
+		&__column {
+			display: flex;
+			flex-direction: column;
+		}
+		&__row {
+			align-items: flex-end;
+			gap: 0;
+		}
+		&__image {
+			width: 299px;
+			height: 274px;
+		}
+		&__subtitle {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		&__title {
+			font-size: 20px;
+			letter-spacing: -0.7px;
+			&-item {
+				font-size: 12px;
+				letter-spacing: -0.42px;
+			}
+			&-clients {
+				margin-bottom: 40px;
+			}
+		}
+		&__descr {
+			font-size: 14px;
+			letter-spacing: -0.69px;
+			margin-bottom: 65px;
+			&-dot {
+				display: none;
+			}
+		}
+		&__clients {
+			row-gap: 48px;
+		}
+		&__item {
+			&-1 {
+				order: 1;
+			}
+			&-2 {
+				order: 1;
+			}
+			&-3 {
+				order: 3;
+			}
+			&-4 {
+				order: 5;
+			}
+			&-5 {
+				order: 2;
+			}
+			&-6 {
+				order: 4;
+			}
+		}
+		&__icon {
+			&-fso {
+				margin-bottom: 10px;
+			}
+			&-mid {
+				height: 67px;
+				width: auto;
+				margin-bottom: 11px;
+			}
+			&-mvd {
+				margin-bottom: 12px;
+			}
+			&-mzo {
+				margin-bottom: 11px;
+			}
+			&-yvd {
+				margin-bottom: 15px;
+			}
+			&-rkn {
+				margin-bottom: 12px;
+			}
+		}
+		&__button {
+			&-discuss {
+				align-self: center;
+				padding-right: 4px;
+				padding-left: 4px;
+			}
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.projects {
+		&__image {
+			display: none;
+		}
+		&__descr {
+			letter-spacing: -0.49px;
+			&-dot {
+				display: unset;
+			}
+		}
+		&__button {
+			max-width: 357px;
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+			text-align: center;
+			&-discuss {
+				font-weight: 600;
+				font-size: 13px;
+			}
+		}
+		&__row {
+			margin-bottom: 64px;
+		}
+		&__title {
+			&-clients {
+				margin-bottom: 36px;
+			}
+		}
+		&__clients {
+			row-gap: 16px;
+		}
+		&__item {
+			grid-column: 6 span;
+			&-1 {
+				order: 1;
+			}
+			&-2 {
+				order: 1;
+			}
+			&-4 {
+				order: 2;
+			}
+		}
+		&__content {
+			padding-bottom: 46px;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.projects {
+		&__item {
+			grid-column: 12 span;
+		}
 	}
 }
