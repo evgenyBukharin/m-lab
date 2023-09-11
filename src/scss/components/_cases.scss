@@ -1,4 +1,105 @@
 .cases {
 	&__container {
+		&-cases {
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
+			margin-bottom: 60px;
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 64px;
+		&-name {
+			color: var(--white-color);
+			font-size: 16px;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: -0.56px;
+		}
+		&-organization {
+			color: var(--white-color);
+			font-size: 10px;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 0.3px;
+			margin-bottom: 6px;
+		}
+	}
+	&__paragraph {
+		color: var(--blue-color);
+		font-size: 14px;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		font-weight: 600;
+		&-bold {
+			font-weight: 700;
+		}
+		&-title {
+			font-size: 16px;
+		}
+	}
+	&__heading {
+		margin-bottom: 17px;
+	}
+	&__external {
+		margin-bottom: 34px;
+	}
+	&__list {
+		counter-reset: items 0;
+	}
+	&__item {
+		position: relative;
+		color: var(--blue-color);
+		font-size: 14px;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		font-weight: 600;
+		counter-increment: items 1;
+		& .cases__paragraph {
+			&::before {
+				content: counter(items) ".";
+			}
+			margin-left: 2px;
+		}
+	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 12px;
+		max-width: 445px;
+	}
+	&__manager {
+		padding: 14px 23px 19px 20px;
+		background: var(--light-green-color);
+		border-radius: 15px;
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+	}
+	&__avatar {
+		margin-top: 5px;
+		border-radius: 100%;
+	}
+	&__text {
+		color: var(--blue-color);
+		font-size: 10px;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: 0.3px;
+	}
+	&__button {
+		padding: 20px 21px 21px 29px;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: normal;
+		display: block;
+		margin: 0 auto;
 	}
 }
