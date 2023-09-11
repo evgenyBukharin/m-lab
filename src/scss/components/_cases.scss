@@ -102,4 +102,38 @@
 		display: block;
 		margin: 0 auto;
 	}
+	&__image {
+		border-radius: 7px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.cases {
+		&__row {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.cases {
+		&__container {
+			&-cases {
+				gap: 80px;
+				margin-bottom: 70px;
+			}
+		}
+		&__title {
+			margin-bottom: 22px;
+		}
+		&__image {
+			width: 100%;
+			max-width: 454px;
+			height: auto;
+		}
+		&__column {
+			gap: 38px;
+		}
+	}
 }
