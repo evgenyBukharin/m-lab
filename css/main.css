@@ -147,7 +147,7 @@ html {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
-main section {
+main section:not(:last-child) {
 	margin-bottom: 120px;
 }
 .button__primary {
@@ -284,7 +284,7 @@ main section {
 	}
 }
 @media (max-width: 797px) {
-	main section {
+	main section:not(:last-child) {
 		margin-bottom: 100px;
 	}
 	.hero__image {
@@ -1237,7 +1237,7 @@ main section {
 	}
 }
 @media (max-width: 480px) {
-	main section {
+	main section:not(:last-child) {
 		margin-bottom: 80px;
 	}
 	.lab__title-textarea {
