@@ -1,0 +1,208 @@
+.consult {
+	background: url("../img/consult-bg.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 62px;
+	padding-bottom: 87px;
+	&__container {
+		max-width: 977px;
+		&-inner {
+			position: relative;
+			border-radius: 20px;
+			background: rgba(5, 56, 80, 0.7);
+			padding: 41px 18px 40px 89px;
+		}
+	}
+	&__content {
+		max-width: 477px;
+	}
+	&__heading {
+		padding-left: 15px;
+		margin-bottom: 24px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 4px;
+			background: var(--white-color);
+		}
+	}
+	&__title {
+		color: var(--dark-green-color);
+		font-size: 24px;
+		line-height: normal;
+		letter-spacing: -0.84px;
+		padding-bottom: 5px;
+	}
+	&__subtitle {
+		color: var(--white-color);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		padding-bottom: 5px;
+		max-width: 398px;
+	}
+	&__nowrap {
+		white-space: nowrap;
+	}
+	&__textarea {
+		padding-bottom: 62px;
+	}
+	&__paragraph {
+		color: var(--white-color);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		&-smaller {
+			color: var(--white-color);
+			font-size: 8px;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: -0.28px;
+			max-width: 398px;
+			&-bold {
+				font-weight: 700;
+			}
+		}
+	}
+	&__form {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 19px;
+	}
+	&__input {
+		max-width: 216px;
+		width: 100%;
+		padding: 18px 15px;
+		border: 1px solid var(--white-color);
+		outline: none;
+		color: var(--white-color);
+		font-size: 10px;
+		line-height: normal;
+		letter-spacing: -0.35px;
+		border-radius: 7px;
+		background: transparent;
+		&::placeholder {
+			color: var(--white-color);
+			font-size: 10px;
+			line-height: normal;
+			letter-spacing: -0.35px;
+		}
+	}
+	&__button {
+		padding: 18px 24px;
+		text-align: center;
+		font-size: 10px;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.35px;
+		max-width: 193px;
+		width: 100%;
+	}
+	&__image {
+		position: absolute;
+		bottom: -20px;
+		right: 16px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.consult {
+		padding-top: 0;
+		padding-bottom: 0;
+		background: #053850b2;
+		&__container {
+			&-inner {
+				display: flex;
+				gap: 60px;
+				padding: 40px 6px 40px 10px;
+				background: transparent;
+			}
+		}
+		&__image {
+			position: unset;
+			width: 100%;
+			max-width: 282px;
+			height: auto;
+			max-height: 294px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.consult {
+		&__container {
+			&-inner {
+				gap: 8px;
+				justify-content: space-between;
+			}
+		}
+		&__heading {
+			padding-left: 14px;
+			margin-bottom: 30px;
+			&::before {
+				width: 1px;
+				top: 5px;
+				bottom: 1px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+			letter-spacing: -0.7px;
+			margin-bottom: 10px;
+			margin-top: 12px;
+		}
+		&__subtitle {
+			font-size: 14px;
+			letter-spacing: -0.49px;
+			padding-bottom: 0;
+		}
+		&__paragraph {
+			font-size: 14px;
+			letter-spacing: -0.49px;
+			&-smaller {
+				font-size: 8px;
+				letter-spacing: -0.28px;
+			}
+		}
+		&__textarea {
+			padding-bottom: 33px;
+		}
+		&__form {
+			margin-bottom: 21px;
+		}
+	}
+}
+
+@media (max-width: 670px) {
+	.consult {
+		&__container {
+			&-inner {
+				justify-content: center;
+				padding-right: 10px;
+				padding-bottom: 38px;
+			}
+		}
+		&__image {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 382px) {
+	.consult {
+		&__form {
+			display: flex;
+			flex-direction: column;
+		}
+		&__button {
+			max-width: 216px;
+		}
+	}
+}
