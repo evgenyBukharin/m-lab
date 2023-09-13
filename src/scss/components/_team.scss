@@ -1,4 +1,24 @@
 .team {
+	&__container {
+		&-avatar {
+			position: relative;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 35px;
+			width: fit-content;
+			height: fit-content;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: -6px;
+				background: var(--after-grey-color);
+				border-radius: 100%;
+				box-sizing: content-box;
+				border-left: 110px solid var(--light-grey-color);
+			}
+		}
+	}
 	&__subtitle {
 		margin-bottom: 28px;
 		text-align: center;
@@ -42,12 +62,12 @@
 		}
 	}
 	&__avatar {
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 35px;
+		position: relative;
 		max-width: 210px;
 		width: 100%;
 		height: auto;
+		border-radius: 100%;
+		z-index: 100;
 	}
 	&__name {
 		color: var(--blue-color);
@@ -169,8 +189,10 @@
 		&__grid {
 			row-gap: 44px;
 		}
-		&__avatar {
-			margin-bottom: 14px;
+		&__container {
+			&-avatar {
+				margin-bottom: 14px;
+			}
 		}
 	}
 }

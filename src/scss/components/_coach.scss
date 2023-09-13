@@ -1,0 +1,154 @@
+.coach {
+	&__container {
+		&-avatar {
+			position: relative;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 35px;
+			width: fit-content;
+			height: fit-content;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: -6px;
+				background: var(--after-grey-color);
+				border-radius: 100%;
+				box-sizing: content-box;
+				border-left: 110px solid var(--light-grey-color);
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 51px;
+		color: var(--dark-green-color);
+		text-align: center;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 129%;
+		&-textarea {
+			color: var(--blue-color);
+			font-size: 16px;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: -0.56px;
+		}
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 20px 53px;
+	}
+	&__item {
+		grid-column: 3 span;
+	}
+	&__avatar {
+		position: relative;
+		z-index: 100;
+		max-width: 210px;
+		width: 100%;
+		height: auto;
+		border-radius: 100%;
+	}
+	&__name {
+		color: var(--blue-color);
+		font-size: 16px;
+		font-weight: 800;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		margin-bottom: 21px;
+	}
+	&__job {
+		color: var(--blue-color);
+		font-size: 16px;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		margin-bottom: 21px;
+	}
+	&__textarea {
+		text-align: left;
+	}
+	&__education {
+		margin-bottom: 16px;
+	}
+	&__expertance {
+		margin-bottom: 16px;
+	}
+	&__text {
+		&-textarea {
+			color: var(--blue-color);
+			font-size: 16px;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: -0.56px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.coach {
+		&__grid {
+			gap: 36px 24px;
+		}
+		&__item {
+			grid-column: 6 span;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.coach {
+		&__name,
+		&__job,
+		&__text-textarea,
+		&__title-textarea {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.coach {
+		&__container {
+			&-avatar {
+				&::after {
+					border-left-width: 100px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 440px) {
+	.coach {
+		&__container {
+			&-avatar {
+				&::after {
+					border-left-width: 92px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.coach {
+		&__container {
+			&-avatar {
+				&::after {
+					border-left-width: 105px;
+				}
+			}
+		}
+		&__item {
+			grid-column: 12 span;
+		}
+		&__list {
+			column-gap: 0;
+		}
+	}
+}
