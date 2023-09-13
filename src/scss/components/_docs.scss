@@ -1,0 +1,148 @@
+.docs {
+	&__container {
+		padding-top: 16px;
+		&-bg {
+			display: flex;
+			justify-content: space-between;
+			background: url("../img/docs-bg.png") var(--light-green-color);
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 15px;
+			padding-right: 15px;
+		}
+	}
+	&__textarea {
+		padding: 56px 0 87px 65px;
+	}
+	&__title {
+		max-width: 627px;
+		margin-bottom: 23px;
+	}
+	&__paragraph {
+		color: var(--blue-color);
+		font-size: 20px;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: -0.7px;
+		&-bold {
+			font-weight: 700;
+		}
+		&-first {
+			max-width: 630px;
+			margin-bottom: 13px;
+		}
+		&-second {
+			max-width: 517px;
+		}
+	}
+	&__image {
+		margin-top: -26px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.docs {
+		&__image {
+			margin: auto 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.docs {
+		&__container {
+			&-bg {
+				position: relative;
+				padding-top: 110px;
+				padding-bottom: 3px;
+			}
+		}
+		&__textarea {
+			padding: 29px 0 120px 27px;
+		}
+		&__image {
+			margin: 0;
+			margin-top: auto;
+			margin-left: -30px;
+		}
+		&__title {
+			position: absolute;
+			top: 26px;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 728px;
+			width: 100%;
+			padding: 0px 43px;
+			text-align: center;
+			font-size: 28px;
+			letter-spacing: -0.98px;
+		}
+		&__paragraph {
+			&-first {
+				margin-bottom: 42px;
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.docs {
+		&__container {
+			&-bg {
+				padding-top: 16px;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		&__title {
+			position: unset;
+			transform: unset;
+			padding: 0;
+		}
+		&__paragraph {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__image {
+			margin-left: 0;
+		}
+		&__textarea {
+			padding-bottom: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.docs {
+		&__container {
+			&-bg {
+				padding: 16px 27px 0 30px;
+			}
+		}
+		&__title {
+			font-size: 24px;
+			margin-bottom: 11px;
+			max-width: 351px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__paragraph {
+			font-size: 16px;
+			&-first {
+				max-width: 276px;
+				margin-bottom: 15px;
+				letter-spacing: -0.56px;
+			}
+		}
+		&__image {
+			max-width: 301px;
+			width: 100%;
+			height: auto;
+		}
+		&__textarea {
+			padding: 0;
+		}
+	}
+}
