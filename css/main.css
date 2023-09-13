@@ -2484,3 +2484,227 @@ main section {
 		column-gap: 0;
 	}
 }
+.license__container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 41px;
+}
+.license__container-image {
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+.license__title {
+	margin-bottom: 30px;
+	max-width: 618px;
+}
+.license__paragraph {
+	color: var(--blue-color);
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 130%;
+	letter-spacing: -0.7px;
+	max-width: 736px;
+}
+.license__link {
+	position: absolute;
+	inset: 0;
+	background: rgba(104, 104, 104, 0.5);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+@media (max-width: 768px) {
+	.license__container {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		max-width: 648px;
+		gap: 35px;
+	}
+	.license__image {
+		width: 200px;
+		height: auto;
+	}
+	.license__title {
+		font-size: 24px;
+		margin-bottom: 57px;
+	}
+	.license__paragraph {
+		font-size: 18px;
+		letter-spacing: -0.63px;
+	}
+}
+@media (max-width: 520px) {
+	.license__container {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 17px;
+	}
+	.license__title {
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 17px;
+		max-width: 438px;
+	}
+	.license__paragraph {
+		text-align: center;
+		font-size: 16px;
+		letter-spacing: -0.56px;
+		max-width: 412px;
+	}
+}
+.docs__container {
+	padding-top: 16px;
+}
+.docs__container-bg {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	background: url(../img/docs-bg.png) var(--light-green-color);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 15px;
+	padding-right: 15px;
+}
+.docs__textarea {
+	padding: 56px 0 87px 65px;
+}
+.docs__title {
+	max-width: 627px;
+	margin-bottom: 23px;
+}
+.docs__paragraph {
+	color: var(--blue-color);
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.7px;
+}
+.docs__paragraph-bold {
+	font-weight: 700;
+}
+.docs__paragraph-first {
+	max-width: 630px;
+	margin-bottom: 13px;
+}
+.docs__paragraph-second {
+	max-width: 517px;
+}
+.docs__image {
+	margin-top: -26px;
+}
+@media (max-width: 1024px) {
+	.docs__image {
+		margin: auto 0;
+	}
+}
+@media (max-width: 768px) {
+	.docs__container-bg {
+		position: relative;
+		padding-top: 110px;
+		padding-bottom: 3px;
+	}
+	.docs__textarea {
+		padding: 29px 0 120px 27px;
+	}
+	.docs__image {
+		margin: auto 0 0 -30px;
+	}
+	.docs__title {
+		position: absolute;
+		top: 26px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		max-width: 728px;
+		width: 100%;
+		padding: 0 43px;
+		text-align: center;
+		font-size: 28px;
+		letter-spacing: -0.98px;
+	}
+	.docs__paragraph-first {
+		margin-bottom: 42px;
+	}
+}
+@media (max-width: 720px) {
+	.docs__container-bg {
+		padding-top: 16px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	.docs__title {
+		position: unset;
+		-webkit-transform: unset;
+		-ms-transform: unset;
+		transform: unset;
+		padding: 0;
+	}
+	.docs__paragraph {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.docs__image {
+		margin-left: 0;
+	}
+	.docs__textarea {
+		padding-bottom: 0;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.docs__container-bg {
+		padding: 16px 27px 0 30px;
+	}
+	.docs__title {
+		font-size: 24px;
+		margin-bottom: 11px;
+		max-width: 351px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.docs__paragraph {
+		font-size: 16px;
+	}
+	.docs__paragraph-first {
+		max-width: 276px;
+		margin-bottom: 15px;
+		letter-spacing: -0.56px;
+	}
+	.docs__image {
+		max-width: 301px;
+		width: 100%;
+		height: auto;
+	}
+	.docs__textarea {
+		padding: 0;
+	}
+}
