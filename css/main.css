@@ -326,6 +326,7 @@ main section {
 	}
 }
 .service__container {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -775,6 +776,16 @@ main section {
 .service__icon-9 {
 	display: none;
 }
+.service__bg {
+	position: absolute;
+	bottom: 118px;
+	-webkit-transform: translateX(-14px);
+	-ms-transform: translateX(-14px);
+	transform: translateX(-14px);
+}
+.service__button {
+	margin-top: 49px;
+}
 @media (max-width: 1120px) {
 	.service__container {
 		max-width: 590px;
@@ -791,6 +802,9 @@ main section {
 	.service__list {
 		-ms-grid-columns: (1fr) [6];
 		grid-template-columns: repeat(6, 1fr);
+	}
+	.service__bg {
+		display: none;
 	}
 }
 @media (max-width: 768px) {
