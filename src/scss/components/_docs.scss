@@ -1,4 +1,60 @@
 .docs {
+	&-1 {
+		& .docs {
+			&__container {
+				&-bg {
+					padding-right: 78px;
+				}
+			}
+			&__textarea {
+				padding: 34px 0 31px 95px;
+			}
+			&__title {
+				font-size: 32px;
+				font-weight: 700;
+				line-height: normal;
+				letter-spacing: -1.12px;
+				margin-bottom: 13px;
+			}
+		}
+	}
+	&-2 {
+		& .docs {
+			&__container {
+				&-bg {
+					padding-right: 52px;
+				}
+			}
+			&__textarea {
+				padding-bottom: 31px;
+			}
+			&__list {
+				padding-left: 30px;
+				margin-bottom: 17px;
+			}
+			&__item {
+				color: var(--docs-text-color);
+				font-size: 24px;
+				font-weight: 700;
+				letter-spacing: -0.84px;
+				&::before {
+					width: 6px;
+					height: 6px;
+					top: 13px;
+					left: -18px;
+				}
+			}
+		}
+	}
+	&-3 {
+		& .docs {
+			&__subtitle {
+				&-green {
+					margin-bottom: 72px;
+				}
+			}
+		}
+	}
 	&__container {
 		padding-top: 16px;
 		&-bg {
@@ -37,11 +93,102 @@
 	}
 	&__image {
 		margin-top: -26px;
+		&-1 {
+			margin-top: -18px;
+		}
+		&-2 {
+			margin-left: -37px;
+			margin-top: -47px;
+		}
+	}
+	&__subtitle {
+		color: var(--docs-text-color);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: -0.84px;
+		margin-bottom: 10px;
+		&-green {
+			color: var(--dark-green-color);
+			margin-bottom: 29px;
+		}
+	}
+	&__list {
+		padding-left: 24px;
+		margin-bottom: 25px;
+	}
+	&__item {
+		position: relative;
+		color: var(--docs-text-color);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 9px;
+			left: -15px;
+			width: 4px;
+			height: 4px;
+			border-radius: 100%;
+			background: var(--docs-text-color);
+		}
+	}
+	&__button {
+		max-width: 337px;
+		font-size: 13px;
+		font-weight: 600;
+		padding-top: 20px;
+		padding-bottom: 21px;
+		width: 100%;
+	}
+}
+
+@media (max-width: 1117px) {
+	.docs {
+		&-2 {
+			& .docs {
+				&__container {
+					max-width: 760px;
+					&-bg {
+						padding-right: 24px;
+					}
+				}
+				&__list {
+					display: none;
+				}
+				&__image {
+					&-2 {
+						width: auto;
+						height: 271px;
+						margin-top: 30px;
+						margin-left: 0;
+					}
+				}
+				&__subtitle {
+					font-size: 18px;
+					letter-spacing: -0.63px;
+					margin-bottom: 15px;
+					&-green {
+						font-size: 16px;
+						letter-spacing: -0.56px;
+						margin-bottom: 41px;
+					}
+				}
+				&__textarea {
+					padding: 32px 0 61px 42px;
+				}
+			}
+		}
 	}
 }
 
 @media (max-width: 1024px) {
 	.docs {
+		&-1 {
+			display: none;
+		}
 		&__image {
 			margin: auto 0;
 		}
@@ -50,6 +197,16 @@
 
 @media (max-width: 768px) {
 	.docs {
+		&-2 {
+			.docs {
+				&__container {
+					&-bg {
+						padding-top: 0;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
 		&__container {
 			&-bg {
 				position: relative;
@@ -87,6 +244,34 @@
 
 @media (max-width: 720px) {
 	.docs {
+		&-2 {
+			& .docs {
+				&__container {
+					max-width: 464px;
+					&-bg {
+						padding-top: 0;
+					}
+				}
+				&__image {
+					&-2 {
+						margin: 0;
+						margin-bottom: 105px;
+					}
+				}
+				&__subtitle {
+					margin-bottom: 15px;
+					&-green {
+						margin-bottom: 30px;
+					}
+				}
+				&__button {
+					position: absolute;
+					left: 50%;
+					bottom: 48px;
+					transform: translateX(-50%);
+				}
+			}
+		}
 		&__container {
 			&-bg {
 				padding-top: 16px;
@@ -116,6 +301,19 @@
 
 @media (max-width: 480px) {
 	.docs {
+		&-2 {
+			& .docs {
+				&__container {
+					&-bg {
+						padding: 0;
+					}
+				}
+				&__textarea {
+					padding: 33px 60px 0 41px;
+					margin-bottom: 0;
+				}
+			}
+		}
 		&__container {
 			&-bg {
 				padding: 16px 27px 0 30px;
@@ -143,6 +341,40 @@
 		}
 		&__textarea {
 			padding: 0;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.docs {
+		&-2 {
+			& .docs {
+				&__button {
+					position: unset;
+					transform: unset;
+					margin-bottom: 30px;
+				}
+				&__subtitle {
+					&-green {
+						margin-bottom: 18px;
+					}
+				}
+				&__image {
+					&-2 {
+						margin-bottom: 0;
+						padding-right: 12px;
+						padding-left: 12px;
+						max-width: 100%;
+						height: auto;
+					}
+				}
+				&__textarea {
+					padding-right: 41px;
+				}
+				&__button {
+					white-space: nowrap;
+				}
+			}
 		}
 	}
 }
