@@ -10,6 +10,7 @@
 					margin-bottom: 30px;
 					font-size: 32px;
 					line-height: 129%;
+					color: var(--black-color);
 					&-card {
 						margin-bottom: 40px;
 					}
@@ -70,6 +71,259 @@
 				}
 			}
 		}
+		&-2 {
+			& .service {
+				&__title {
+					margin-bottom: 38px;
+					color: var(--black-color);
+				}
+				&__list {
+					width: 100%;
+					counter-reset: items 0;
+				}
+				&__item {
+					padding: 35px;
+					counter-increment: items 1;
+					&::before {
+						content: counter(items);
+						position: absolute;
+						top: 26px;
+						right: 45px;
+						color: var(--real-black-color);
+						font-size: 40px;
+						z-index: 100;
+					}
+					& .service {
+						&__title {
+							&-card {
+								position: relative;
+								margin-bottom: 45px;
+								max-width: 367px;
+								&::before {
+									content: "";
+									width: 2px;
+									height: 25px;
+									background: var(--dark-green-color);
+									position: absolute;
+									top: 1px;
+									left: -8px;
+								}
+							}
+						}
+					}
+					&-1 {
+						&::after {
+							background-image: url("../img/service-bg-8.png");
+						}
+						& .service {
+							&__list {
+								&-card {
+									gap: 0;
+									margin-bottom: 33px;
+									max-width: 351px;
+								}
+							}
+							&__item {
+								&-card {
+									line-height: 150%;
+									&-nobefore {
+										position: relative;
+										max-width: 351px;
+										line-height: 150%;
+										&-exclamation {
+											color: var(--dark-green-color);
+											font-size: 20px;
+											font-weight: 600;
+											line-height: 157%;
+											margin-right: 3px;
+										}
+									}
+								}
+							}
+						}
+					}
+					&-2 {
+						&::after {
+							background-image: url("../img/service-bg-9.png");
+						}
+					}
+					&-3 {
+						&::after {
+							background-image: url("../img/service-bg-10.png");
+						}
+					}
+					&-4 {
+						&::after {
+							background-image: url("../img/service-bg-11.png");
+						}
+						& .service {
+							&__title {
+								&-card {
+									margin-bottom: 18px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&-3 {
+			&-titles {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			& .service {
+				&__title {
+					color: var(--black-color);
+				}
+				&__item {
+					& .service {
+						&__title {
+							&-card {
+								margin-bottom: 25px;
+							}
+						}
+						&__list {
+							&-card {
+								gap: 0;
+							}
+						}
+					}
+					&-card {
+						line-height: 150%;
+					}
+					&-1 {
+						&::after {
+							background-image: url("../img/service-bg-15.png");
+						}
+					}
+					&-2 {
+						&::after {
+							background-image: url("../img/service-bg-12.png");
+						}
+						& .service {
+							&__list {
+								&-card {
+									margin-bottom: 0;
+									max-width: 387px;
+								}
+							}
+						}
+					}
+					&-3 {
+						&::after {
+							background-image: url("../img/service-bg-13.png");
+						}
+						& .service {
+							&__list {
+								&-card {
+									max-width: 261px;
+								}
+							}
+						}
+					}
+					&-4 {
+						&::after {
+							background-image: url("../img/service-bg-14.png");
+						}
+						& .service {
+							&__list {
+								&-card {
+									padding-left: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&-4 {
+			& .service {
+				&__title {
+					margin-bottom: 39px;
+					color: var(--black-color);
+					&-card {
+						max-width: 367px;
+						margin-bottom: 38px;
+					}
+				}
+				&__list {
+					width: 100%;
+					counter-reset: items 0;
+					&-card {
+						padding-left: 0;
+						gap: 0;
+					}
+				}
+				&__item {
+					padding: 35px;
+					counter-increment: items 1;
+					&::before {
+						content: counter(items);
+						position: absolute;
+						top: 26px;
+						right: 45px;
+						color: var(--real-black-color);
+						font-size: 40px;
+						z-index: 100;
+					}
+					&-card {
+						line-height: 150%;
+						&-nobefore {
+							max-width: 387px;
+						}
+						&::before {
+							display: none;
+						}
+					}
+					&-1 {
+						&::after {
+							background-image: url("../img/service-bg-16.png");
+						}
+					}
+					&-2 {
+						&::after {
+							background-image: url("../img/service-bg-17.png");
+						}
+						& .service {
+							&__title {
+								&-card {
+									margin-bottom: 60px;
+								}
+							}
+						}
+					}
+					&-3 {
+						&::after {
+							background-image: url("../img/service-bg-19.png");
+						}
+						& .service {
+							&__title {
+								&-card {
+									max-width: 367px;
+								}
+							}
+						}
+					}
+					&-4 {
+						&::after {
+							background-image: url("../img/service-bg-18.png");
+						}
+						& .service {
+							&__list {
+								max-width: 335px;
+							}
+							&__title {
+								&-card {
+									max-width: 367px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	&__title {
 		max-width: 594px;
@@ -82,6 +336,20 @@
 			font-weight: 700;
 			line-height: normal;
 			margin-bottom: 18px;
+		}
+		&-main {
+			max-width: 965px;
+			margin-bottom: 22px;
+		}
+		&-icon {
+			color: var(--black-color);
+			text-align: center;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 134%;
+			&-7 {
+				max-width: 169px;
+			}
 		}
 	}
 	&__subtitle {
@@ -114,6 +382,13 @@
 			flex-direction: column;
 			padding-left: 24px;
 			gap: 6px;
+		}
+		&-icons {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			column-gap: 23px;
+			row-gap: 58px;
+			margin-bottom: 120px;
 		}
 	}
 	&__item {
@@ -192,7 +467,7 @@
 					max-width: 185px;
 				}
 				&__list-card {
-					max-width: 208px;
+					max-width: 305px;
 				}
 			}
 		}
@@ -217,6 +492,45 @@
 					display: none;
 				}
 			}
+			&-nowrap {
+				white-space: nowrap;
+			}
+		}
+		&-icon {
+			grid-column: 3 span;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__paragraph {
+		max-width: 1110px;
+		margin-bottom: 120px;
+		color: var(--real-black-color);
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 129%;
+		text-align: center;
+	}
+	&__icon {
+		margin-bottom: 17px;
+		&-5 {
+			margin-top: 4px;
+			margin-bottom: 8px;
+		}
+		&-6 {
+			margin-bottom: 10px;
+		}
+		&-7 {
+			margin-bottom: 11px;
+		}
+		&-8 {
+			margin-bottom: 3px;
+			margin-top: -6px;
+		}
+		&-9 {
+			display: none;
 		}
 	}
 }
@@ -225,6 +539,23 @@
 	.service {
 		&__container {
 			max-width: 590px;
+			&-3 {
+				&-titles {
+					& .service {
+						&__title {
+							&-main {
+								max-width: 651px;
+								margin-bottom: 32px;
+							}
+						}
+						&__paragraph {
+							max-width: 685px;
+							margin-bottom: 100px;
+							font-size: 16px;
+						}
+					}
+				}
+			}
 		}
 		&__list {
 			grid-template-columns: repeat(6, 1fr);
@@ -283,11 +614,313 @@
 					}
 				}
 			}
+			&-2 {
+				& .service {
+					&__item {
+						min-height: 310px;
+						padding: 29px;
+						&::before {
+							font-size: 30px;
+							top: 22px;
+							right: 44px;
+						}
+						& .service {
+							&__title {
+								&-card {
+									margin-bottom: 38px;
+									&::before {
+										height: 21px;
+									}
+								}
+							}
+						}
+						&-1 {
+							&::after {
+								background-size: 150px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 66px;
+										margin-bottom: 23px;
+									}
+								}
+								&__item {
+									&-card {
+										&-nobefore {
+											max-width: 298px;
+											&-exclamation {
+												font-size: 12px;
+												line-height: 157%;
+												margin-right: 0px;
+											}
+										}
+									}
+								}
+							}
+						}
+						&-2 {
+							&::after {
+								background-size: 180px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 66px;
+										gap: 0;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 227px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 156px;
+										gap: 0;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 271px;
+							}
+							& .service {
+								&__title {
+									&-card {
+										margin-bottom: 15px;
+									}
+								}
+								&__list {
+									&-card {
+										padding-right: 136px;
+										gap: 0;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-3 {
+				&-titles {
+					& .service {
+						&__title {
+							&-main {
+								margin-bottom: 23px;
+							}
+						}
+						&__paragraph {
+							margin-bottom: 80px;
+						}
+					}
+				}
+				& .service {
+					&__item {
+						min-height: 306px;
+						padding: 29px;
+						&::before {
+							font-size: 30px;
+							top: 22px;
+							right: 44px;
+						}
+						& .service {
+							&__title {
+								&-card {
+									margin-bottom: 21px;
+									&::before {
+										height: 21px;
+									}
+								}
+							}
+						}
+						&-1 {
+							&::after {
+								background-size: 326px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 66px;
+										margin-bottom: 0;
+									}
+								}
+								&__item {
+									&-card {
+										&-nobefore {
+											max-width: 298px;
+											&-exclamation {
+												font-size: 12px;
+												line-height: 157%;
+												margin-right: 0px;
+											}
+										}
+									}
+								}
+							}
+						}
+						&-2 {
+							&::after {
+								background-size: 250px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 66px;
+										gap: 0;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 229px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+										max-width: 215px;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 222px;
+							}
+							& .service {
+								&__title {
+									&-card {
+										margin-bottom: 21px;
+									}
+								}
+								&__list {
+									&-card {
+										padding-right: 136px;
+										gap: 0;
+									}
+								}
+								&__item {
+									&-card {
+										line-height: 157%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-4 {
+				& .service {
+					&__title {
+						&-card {
+							padding-right: 40px;
+							margin-bottom: 32px;
+						}
+					}
+					&__item {
+						padding: 29px;
+						&::before {
+							font-size: 30px;
+							top: 22px;
+							right: 44px;
+						}
+						&-card {
+							line-height: 150%;
+							&-nobefore {
+								max-width: 387px;
+							}
+						}
+						&-1 {
+							&::after {
+								background-size: 131px;
+							}
+							& .service {
+								&__item {
+									&-card {
+										&-nobefore {
+											max-width: 387px;
+											padding-right: 54px;
+										}
+									}
+								}
+							}
+						}
+						&-2 {
+							&::after {
+								background-size: 186px;
+							}
+							& .service {
+								&__item {
+									&-card {
+										&-nobefore {
+											max-width: unset;
+											padding-right: 76px;
+										}
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 280px;
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 221px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										max-width: unset;
+										padding-right: 102px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		&__list {
 			grid-template-columns: repeat(6, 1fr);
 			&-card {
 				padding-left: 15px;
+			}
+			&-icons {
+				margin-bottom: 100px;
+				row-gap: 46px;
 			}
 		}
 		&__title {
@@ -296,6 +929,11 @@
 				margin-bottom: 15px;
 				line-height: 134%;
 			}
+			&-icon {
+				&-1 {
+					max-width: 177px;
+				}
+			}
 		}
 		&__subtitle {
 			margin-bottom: 33px;
@@ -303,6 +941,20 @@
 		&__item {
 			padding: 25px;
 			min-height: 303px;
+			&-icon {
+				grid-column: 4 span;
+				order: 1;
+				&-7,
+				&-3 {
+					order: 2;
+					grid-column: 6 span;
+					max-width: 180px;
+					justify-self: flex-start;
+				}
+				&-3 {
+					justify-self: flex-end;
+				}
+			}
 			&-card {
 				font-size: 12px;
 				&::before {
@@ -369,6 +1021,76 @@
 				font-size: 14px;
 			}
 		}
+		&__icon {
+			&-7 {
+				margin-bottom: 21px;
+			}
+			&-8 {
+				display: none;
+			}
+			&-9 {
+				display: unset;
+				margin-top: 0;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
+
+@media (max-width: 610px) {
+	.service {
+		&__title {
+			&-icon {
+				max-width: 177px;
+			}
+		}
+		&__list {
+			&-icons {
+				row-gap: 58px;
+			}
+		}
+		&__item {
+			&-icon {
+				grid-column: 6 span;
+				max-width: unset;
+				justify-self: unset;
+				&-1 {
+					order: 1;
+				}
+				&-2 {
+					order: 2;
+				}
+				&-3 {
+					order: 5;
+				}
+				&-4 {
+					order: 6;
+				}
+				&-5 {
+					order: 3;
+				}
+				&-6 {
+					order: 4;
+				}
+				&-7 {
+					order: 7;
+				}
+				&-9 {
+					order: 8;
+				}
+			}
+		}
+		&__icon {
+			&-3 {
+				margin-bottom: 7px;
+			}
+			&-5 {
+				margin-bottom: 13px;
+			}
+			&-9 {
+				margin-bottom: 17px;
+			}
+		}
 	}
 }
 
@@ -427,6 +1149,157 @@
 					}
 				}
 			}
+			&-2 {
+				padding-left: 10px;
+				padding-right: 10px;
+				& .service {
+					&__title {
+						margin-bottom: 29px;
+					}
+					&__list {
+						row-gap: 14px;
+					}
+					&__item {
+						&-1 {
+							&::after {
+								background-size: 150px;
+							}
+						}
+						&-2 {
+							&::after {
+								background-size: 180px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 76px;
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 227px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 166px;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 273px;
+							}
+							& .service {
+								&__title {
+									&-card {
+										margin-bottom: 15px;
+									}
+								}
+							}
+						}
+					}
+					&__title {
+						&-card {
+							margin-bottom: 38px;
+						}
+					}
+				}
+			}
+			&-3 {
+				padding-left: 10px;
+				padding-right: 10px;
+				& .service {
+					&__title {
+						margin-bottom: 29px;
+					}
+					&__list {
+						row-gap: 14px;
+					}
+					&__item {
+						&-1 {
+							&::after {
+								background-size: 320px;
+							}
+						}
+						&-2 {
+							&::after {
+								background-size: 250px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 66px;
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 229px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 222px;
+							}
+							& .service {
+								&__title {
+									&-card {
+										margin-bottom: 21px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-4 {
+				& .service {
+					&__item {
+						&-2 {
+							& .service {
+								&__item {
+									&-card {
+										&-nobefore {
+											padding-right: 72px;
+										}
+									}
+								}
+							}
+						}
+						&-3 {
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 193px;
+									}
+								}
+							}
+						}
+						&-4 {
+							& .service {
+								&__list {
+									&-card {
+										max-width: unset;
+										padding-right: 102px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		&__item {
 			&-3 {
@@ -443,6 +1316,59 @@
 	}
 }
 
+@media (max-width: 463px) {
+	.service {
+		&__container {
+			&-2 {
+				& .service {
+					&__item {
+						&-4 {
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 186px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-3 {
+				& .service {
+					&__item {
+						&-3 {
+							& .service {
+								&__list {
+									&-card {
+										max-width: unset;
+										padding-right: 200px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-4 {
+				& .service {
+					&__item {
+						&-4 {
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 152px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 435px) {
 	.service {
 		&__container {
@@ -452,6 +1378,81 @@
 						&-3 {
 							&::after {
 								background-size: 168px;
+							}
+						}
+					}
+				}
+			}
+			&-2 {
+				& .service {
+					&__item {
+						&-1 {
+							& .service {
+								&__item {
+									&-card {
+										&-nobefore {
+											padding-right: 90px;
+										}
+									}
+								}
+							}
+						}
+						&-2 {
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 116px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-3 {
+				& .service {
+					&__title {
+						&-card {
+							padding-right: 50px;
+						}
+					}
+					&__item {
+						&-1 {
+							min-height: 340px;
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+							}
+						}
+						&-2 {
+							min-height: 340px;
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+							}
+						}
+						&-3 {
+							min-height: 340px;
+							&::after {
+								background-size: 210px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+								&__item {
+									&-card:not(:first-child) {
+										padding-right: 180px;
+									}
+								}
 							}
 						}
 					}
@@ -510,6 +1511,138 @@
 	}
 }
 
+@media (max-width: 412px) {
+	.service {
+		&__container {
+			&-2 {
+				& .service {
+					&__item {
+						&-2 {
+							& .service {
+								&__title {
+									&-card {
+										padding-right: 46px;
+									}
+								}
+								&__list {
+									&-card {
+										padding-right: 156px;
+									}
+								}
+							}
+						}
+						&-3 {
+							&::after {
+								background-size: 190px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 100px;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 210px;
+							}
+							& .service {
+								&__title {
+									&-card {
+										padding-right: 40px;
+									}
+								}
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-3 {
+				& .service {
+					&__item {
+						&-3 {
+							&::after {
+								background-size: 140px;
+							}
+							& .service {
+								&__item {
+									&-card {
+										&:not(:first-child) {
+											padding-right: 0;
+										}
+										&:last-child {
+											padding-right: 110px;
+										}
+									}
+								}
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 160px;
+							}
+						}
+					}
+				}
+			}
+			&-4 {
+				& .service {
+					&__item {
+						&-3 {
+							&::after {
+								background-size: 190px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 140px;
+									}
+								}
+							}
+						}
+						&-4 {
+							&::after {
+								background-size: 150px;
+							}
+							& .service {
+								&__list {
+									&-card {
+										padding-right: 0;
+									}
+								}
+								&__item {
+									&-card {
+										&:not(:first-child) {
+											padding-right: 99px;
+										}
+										&:nth-child(2) {
+											padding-right: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&__list {
+			column-gap: 12px;
+		}
+	}
+}
+
 @media (max-width: 375px) {
 	.service {
 		&__item {
@@ -524,6 +1657,33 @@
 			}
 			&-4::after {
 				background-size: 160px;
+			}
+			&-icon {
+				grid-column: 12 span;
+			}
+		}
+		&__list {
+			&-icons {
+				column-gap: 0;
+				row-gap: 44px;
+			}
+		}
+		&__container {
+			&-3 {
+				& .service {
+					&__item {
+						&-4 {
+							&::after {
+								background-size: 140px;
+							}
+							.service {
+								&__item-card:not(:first-child) {
+									padding-right: 70px;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
