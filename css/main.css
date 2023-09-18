@@ -4362,11 +4362,132 @@ main section {
 		z-index: 50;
 	}
 }
+.accordion {
+	width: 100%;
+	padding: 0 57px 11px 50px;
+	position: relative;
+	cursor: pointer;
+}
+.accordion__control {
+	padding-top: 11px;
+	padding-bottom: 4px;
+}
+.accordion__content {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding-top: 0;
+	will-change: max-height;
+	-webkit-transition: 0.4s ease-out, opacity 0.4s 0.4s;
+	transition: 0.4s ease-out, opacity 0.4s 0.4s;
+	padding-right: 81px;
+	color: #373737;
+	font-family: HalvarBreit;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: normal;
+	letter-spacing: -0.56px;
+}
+.accordion__content-open {
+	opacity: 1;
+}
+.accordion:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	bottom: 1px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: #e2f0ed;
+}
+.accordion-open .faq__icon-line {
+	opacity: 0;
+}
+@media (max-width: 768px) {
+	.accordion {
+		padding-left: 32px;
+		padding-right: 16px;
+	}
+	.accordion__content {
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: -0.42px;
+	}
+}
 @media (max-width: 480px) {
 	.save-1 .save__paragraph {
 		letter-spacing: -0.1px;
 	}
 	.save-1 .save__item {
 		padding: 14px 14px 16px;
+	}
+	.accordion__content-open {
+		padding-top: 4px;
+		padding-right: 0;
+	}
+}
+.faq {
+	counter-reset: titles 0;
+}
+.faq__container {
+	max-width: 1256px;
+}
+.faq__container-accordions {
+	background: var(--white-color);
+	border-radius: 20px;
+}
+.faq__title {
+	text-align: center;
+	font-size: 32px;
+	line-height: 129%;
+	margin-bottom: 30px;
+}
+.faq__title-control {
+	position: relative;
+	color: var(--blue-color);
+	font-size: 16px;
+	line-height: normal;
+	letter-spacing: -0.56px;
+	counter-increment: titles 1;
+	padding-right: 15px;
+}
+.faq__title-control::before {
+	content: counter(titles) ".";
+}
+.faq__title-control-4 {
+	max-width: 724px;
+}
+.faq__control {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.faq__icon {
+	min-width: 32px;
+	min-height: 32px;
+	width: 32px;
+	height: 32px;
+}
+.faq__icon-line {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+@media (max-width: 768px) {
+	.faq__title {
+		font-size: 20px;
+		letter-spacing: -0.7px;
+		margin-bottom: 21px;
+	}
+	.faq__title-control {
+		font-size: 12px;
+		letter-spacing: -0.42px;
 	}
 }
