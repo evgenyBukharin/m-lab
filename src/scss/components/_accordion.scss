@@ -1,0 +1,73 @@
+.accordion {
+	width: 100%;
+	padding: 0 57px 11px 50px;
+	position: relative;
+	cursor: pointer;
+	&__control {
+		padding-top: 11px;
+		padding-bottom: 4px;
+	}
+	&__content {
+		box-sizing: content-box;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding-top: 0;
+		will-change: max-height;
+		transition: all 0.4s ease-out, opacity 0.4s ease 0.4s;
+		padding-right: 81px;
+
+		color: #373737;
+		font-family: "HalvarBreit";
+		font-size: 16px;
+		font-weight: 300;
+		line-height: normal;
+		letter-spacing: -0.56px;
+		&-open {
+			opacity: 1;
+		}
+	}
+	&:not(:last-child) {
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 1px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: #e2f0ed;
+		}
+	}
+	&-open {
+		& .faq {
+			&__icon {
+				&-line {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.accordion {
+		padding-left: 32px;
+		padding-right: 16px;
+		&__content {
+			font-size: 12px;
+			font-weight: 300;
+			letter-spacing: -0.42px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.accordion {
+		&__content {
+			&-open {
+				padding-top: 4px;
+				padding-right: 0;
+			}
+		}
+	}
+}

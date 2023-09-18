@@ -1,0 +1,59 @@
+.faq {
+	counter-reset: titles 0;
+	&__container {
+		max-width: 1256px;
+		&-accordions {
+			background: var(--white-color);
+			border-radius: 20px;
+		}
+	}
+	&__title {
+		text-align: center;
+		font-size: 32px;
+		line-height: 129%;
+		margin-bottom: 30px;
+		&-control {
+			position: relative;
+			color: var(--blue-color);
+			font-size: 16px;
+			line-height: normal;
+			letter-spacing: -0.56px;
+			counter-increment: titles 1;
+			padding-right: 15px;
+			&::before {
+				content: counter(titles) ".";
+			}
+			&-4 {
+				max-width: 724px;
+			}
+		}
+	}
+	&__control {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__icon {
+		min-width: 32px;
+		min-height: 32px;
+		width: 32px;
+		height: 32px;
+		&-line {
+			transition: opacity 0.3s ease;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.faq {
+		&__title {
+			font-size: 20px;
+			letter-spacing: -0.7px;
+			margin-bottom: 21px;
+			&-control {
+				font-size: 12px;
+				letter-spacing: -0.42px;
+			}
+		}
+	}
+}
