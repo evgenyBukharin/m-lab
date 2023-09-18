@@ -1,0 +1,148 @@
+.vacancy {
+	background: url("../img/docs-bg.png") var(--light-green-color);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 27px 0;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 41px;
+		&-mobile {
+			display: none;
+		}
+	}
+	&__image {
+		border-radius: 100%;
+		box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	}
+	&__column {
+		margin-top: 11px;
+		display: flex;
+		flex-direction: column;
+		gap: 39px;
+		max-width: 100%;
+		width: 100%;
+	}
+	&__row {
+		display: flex;
+	}
+	&__subtitle {
+		margin-bottom: 5px;
+		color: var(--half-black-color);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 119.4%;
+	}
+	&__title {
+		color: var(--white-color);
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 119.4%;
+		text-decoration: none;
+	}
+	&__paragraph {
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 157%;
+		letter-spacing: -0.028px;
+	}
+	&__department {
+		margin-right: 77px;
+	}
+	&__email {
+		margin-right: 160px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.vacancy {
+		padding-top: 41px;
+		padding-bottom: 51px;
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			gap: 22px;
+		}
+		&__column {
+			margin-top: 0;
+			gap: 27px;
+		}
+		&__department {
+			margin-right: 0;
+		}
+		&__email {
+			margin-right: 0;
+		}
+		&__subtitle {
+			font-size: 14px;
+			margin-bottom: 7px;
+		}
+		&__title {
+			font-size: 16px;
+		}
+		&__paragraph {
+			font-size: 12px;
+		}
+		&__image {
+			width: 154px;
+			height: 154px;
+		}
+	}
+}
+
+@media (max-width: 580px) {
+	.vacancy {
+		&__paragraph {
+			max-width: 414px;
+			text-align: center;
+			&-desktop {
+				display: none;
+			}
+		}
+		&__row {
+			flex-direction: column;
+			row-gap: 24px;
+		}
+		&__container {
+			&-mobile {
+				padding-top: 47px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		&__image {
+			width: 170px;
+			height: 170px;
+			margin-top: 7px;
+		}
+		&__subtitle {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+		&__title {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (max-width: 437px) {
+	.vacancy {
+		&__container {
+			align-items: center;
+			flex-direction: column;
+			gap: 33px;
+			&-mobile {
+				padding-top: 27px;
+			}
+		}
+		&__title {
+			text-align: center;
+			display: block;
+			width: 100%;
+		}
+		&__subtitle {
+			text-align: center;
+		}
+	}
+}
